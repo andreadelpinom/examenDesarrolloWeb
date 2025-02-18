@@ -10,6 +10,7 @@ import { Data } from '../interfaz/data';
 export class RecursosService 
   {
       private apiUrl ="https://images-api.nasa.gov/search?q=galaxy&media_type=image"; 
+      private apiUrl2 = "https://images-assets.nasa.gov/image/PIA04921/collection.json";
 
       constructor(private http: HttpClient) {}
 
@@ -17,6 +18,10 @@ export class RecursosService
         return this.http.get<{ datas: Data[] }>(this.apiUrl);
 
     }
+    obtenerFotos():Observable<{ datas: Data[] }> {
+      return this.http.get<{ datas: Data[] }>(this.apiUrl2);
+
+  }
 
   }
     
