@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './carrusel.component.css'
 })
 export class CarruselComponent {
+  boton1carrusel : string = "Previous"
+  boton2carrusel : string =  "Next"
 
 }
