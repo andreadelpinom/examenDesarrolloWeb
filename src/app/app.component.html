@@ -167,27 +167,29 @@
 
     <h2 class="mt-4">Acerca de la NASA: </h2>
     <p>Representación en un tabla informativa: </p>
-    <h2 class="text-center">Acerca de los descubrimientos</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Titulo</th>
-          <th scope="col">Descripción</th>
-          <th scope="col">Keywords</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (data of datas; track datas){ 
+      <h2 class="text-center">Acerca de los descubrimientos</h2>
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td>{{ data.nasa_id }}</td>
-            <td>{{ data.title }}</td>
-            <td>{{ data.description }}</td>
-            <td>{{ data.keywords }}</td>
+            <th scope="col">ID</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Keywords</th>
+            <th scope="col">Center</th>
           </tr>
-        }
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+        @for (data of datas; track datas){ 
+            <tr>
+              <td>{{ data.nasa_id }}</td>
+              <td>{{ data.title }}</td>
+              <td>{{ data.description }}</td>
+              <td>{{ data.keywords }}</td>
+              <td>{{ data.center }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
   </div>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

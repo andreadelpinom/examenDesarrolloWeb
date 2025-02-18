@@ -9,7 +9,7 @@ import { Data } from '../interfaz/data';
 })
 export class RecursosService 
   {
-      private apiUrl = 'https://images-api.nasa.gov/search?q=galaxy&media_type=image'; 
+      private apiUrl ="https://images-api.nasa.gov/search?q=galaxy&media_type=image"; 
 
       constructor(private http: HttpClient) {}
 
