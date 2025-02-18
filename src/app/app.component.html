@@ -158,17 +158,37 @@
 
     <app-menu></app-menu>
 
-    <h1>Bootstrap grid examples</h1>
-    <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-    <p>In these examples the <code>.themed-grid-col</code> class is added to the columns to add some theming. This is not a class that is available in Bootstrap by default.</p>
+    <h1>NASA Mision</h1>
+    <p class="lead">Nasa was founded on: 29 de julio de 1958, en Estados Unidos </p>
 
-    <h2 class="mt-4">Five grid tiers</h2>
-    <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+    <section>
+      <app-carrusel></app-carrusel>
+    </section>
 
+    <h2 class="mt-4">Acerca de la NASA: </h2>
+    <p>Representación en un tabla informativa: </p>
+    <h2 class="text-center">Acerca de los descubrimientos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Keywords</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (data of datas; track datas){ 
+          <tr>
+            <td>{{ data.nasa_id }}</td>
+            <td>{{ data.title }}</td>
+            <td>{{ data.description }}</td>
+            <td>{{ data.keywords }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
   </div>
-  <section>
-    <app-carrusel></app-carrusel>
-  </section>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
